@@ -1,11 +1,11 @@
-import {useState} from "react";
+import {useCallback, useState} from "react";
 
 import {Modal} from "@/features/modal/Modal.jsx";
 import {Button} from "@/shared/ui/Button.jsx";
 import {PasswordInput} from "@/features/pasword/PasswordInput.jsx";
 
 export const Home = () => {
-    const [isModalOpen, setIsModalOpen] = useState(true);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const [password, setPassword] = useState("");
 
     return (
