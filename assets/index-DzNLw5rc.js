@@ -80,4 +80,4 @@ Error generating stack: `+a.message+`
             height: 20px;
         }
     }
-`,Uy=()=>{const[i,r]=uu.useState(!0),[o,s]=uu.useState("");return mt.jsx(mt.Fragment,{children:mt.jsx("div",{className:"d-flex vh-100 justify-content-center align-items-center",children:i?mt.jsxs(Av,{title:"Modal title",onClose:()=>r(!1),children:[mt.jsx("p",{children:"Hello World!"}),mt.jsx(My,{value:o,onChange:s})]}):mt.jsx(Tv,{title:"Show modal",onClick:()=>r(!0)})})})},Ny=()=>mt.jsx(mt.Fragment,{children:mt.jsx(Uy,{})});bv.createRoot(document.getElementById("root")).render(mt.jsx(uu.StrictMode,{children:mt.jsx(Ny,{})}));
+`,Uy=()=>{const[i,r]=uu.useState(!1),[o,s]=uu.useState("");return mt.jsx(mt.Fragment,{children:mt.jsx("div",{className:"d-flex vh-100 justify-content-center align-items-center",children:i?mt.jsxs(Av,{title:"Modal title",onClose:()=>r(!1),children:[mt.jsx("p",{children:"Hello World!"}),mt.jsx(My,{value:o,onChange:s})]}):mt.jsx(Tv,{title:"Show modal",onClick:()=>r(!0)})})})},Ny=()=>mt.jsx(mt.Fragment,{children:mt.jsx(Uy,{})});bv.createRoot(document.getElementById("root")).render(mt.jsx(uu.StrictMode,{children:mt.jsx(Ny,{})}));
