@@ -4,17 +4,17 @@ import {Modal} from "@/features/modal/Modal.jsx";
 import {Button} from "@/shared/ui/Button.jsx";
 
 export const Home = () => {
-    const [isModalOpen, setIsModalOpen] = useState(true);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
         <>
             <div className="d-flex vh-100 justify-content-center align-items-center">
                 {isModalOpen ? (
-                    <Modal title="Тестовое задание" onClose={() => setIsModalOpen(false)}>
-                        Какая-то информация
+                    <Modal title="Modal title" onClose={() => setIsModalOpen(false)}>
+                        There will be an input here
                     </Modal>
                 ) : (
-                    <Button title="Покажи модалку" onClick={() => setIsModalOpen(true)}/>
+                    <Button title="Show modal" onClick={() => setIsModalOpen(true)}/>
                 )}
             </div>
         </>
