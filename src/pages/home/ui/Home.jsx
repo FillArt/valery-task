@@ -1,7 +1,7 @@
 import {useState} from "react";
 
-import {Modal} from "../../../features/modal/Modal.jsx";
-import {Button} from "../../../shared/ui/Button.jsx";
+import {Modal} from "@/features/modal/Modal.jsx";
+import {Button} from "@/shared/ui/Button.jsx";
 
 export const Home = () => {
     const [isModalOpen, setIsModalOpen] = useState(true);
