@@ -1,4 +1,5 @@
 import {useState} from "react";
+import styled from "styled-components";
 
 export const PasswordInput = ({value, onChange, placeholder='placeholder text...'}) => {
 
@@ -8,7 +9,9 @@ export const PasswordInput = ({value, onChange, placeholder='placeholder text...
     return (
         <div>
             <input type={inputType} value={value} onChange={onChange} placeholder={placeholder}/>
-            <button>(O)</button>
+            <button onClick={() => setIsHiddenPassword(!isHiddenPassword)}>(O)</button>
         </div>
     );
 };
+
+const PasswordContainer = styled.div``
