@@ -1,5 +1,7 @@
 # React + Vite
 
+Link to GH Pages -> https://fillart.github.io/valery-task/
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
