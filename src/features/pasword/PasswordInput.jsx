@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import styled from "styled-components";
 
 import EyeIcon from "./assets/eye.svg"
@@ -10,6 +10,12 @@ export const PasswordInput = ({value, onChange, placeholder='enter text here...'
     const [isHiddenPassword, setIsHiddenPassword] = useState(true)
     const inputType = isHiddenPassword ? 'text' : 'password'
     const eyeIcon = isHiddenPassword ? EyeIconSlash : EyeIcon
+
+    useEffect(() => {
+        return () => {
+            onChange('')
+        };
+    }, []);
 
     const onChangeHandler = (e) => onChange(e.currentTarget.value)
 
