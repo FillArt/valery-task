@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import styled from "styled-components";
 
 import EyeIcon from "./assets/eye.svg"
@@ -10,8 +10,11 @@ export const PasswordInput = ({value, onChange, placeholder='enter text here...'
     const [isHiddenPassword, setIsHiddenPassword] = useState(true)
     const inputType = isHiddenPassword ? 'password' : 'text'
     const eyeIcon = isHiddenPassword ?  EyeIcon : EyeIconSlash
+    const inputRef = useRef(null)
 
     useEffect(() => {
+        inputRef.current?.focus();
+
         return () => {
             onChange('')
             setIsHiddenPassword(true)
@@ -22,7 +25,7 @@ export const PasswordInput = ({value, onChange, placeholder='enter text here...'
 
     return (
         <PasswordContainer>
-            <input type={inputType} value={value} onChange={onChangeHandler} placeholder={placeholder}/>
+            <input ref={inputRef} type={inputType} value={value} onChange={onChangeHandler} placeholder={placeholder}/>
             <button onClick={() => setIsHiddenPassword(!isHiddenPassword)}>
                 <img src={eyeIcon} alt="Toggle visibility"/>
             </button>
