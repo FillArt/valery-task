@@ -1,6 +1,6 @@
 # Тестовое задание
 
-Ccылука на GH Pages -> https://fillart.github.io/valery-task/
+Ccылка на GH Pages -> https://fillart.github.io/valery-task/
 
 ## 🚀 Запуск проекта
 
