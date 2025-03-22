@@ -8,12 +8,13 @@ import EyeIconSlash from "./assets/eye-slash.svg"
 export const PasswordInput = ({value, onChange, placeholder='enter text here...'}) => {
 
     const [isHiddenPassword, setIsHiddenPassword] = useState(true)
-    const inputType = isHiddenPassword ? 'text' : 'password'
-    const eyeIcon = isHiddenPassword ? EyeIconSlash : EyeIcon
+    const inputType = isHiddenPassword ? 'password' : 'text'
+    const eyeIcon = isHiddenPassword ?  EyeIcon : EyeIconSlash
 
     useEffect(() => {
         return () => {
             onChange('')
+            setIsHiddenPassword(true)
         };
     }, []);
 
